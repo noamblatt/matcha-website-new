@@ -1,0 +1,69 @@
+{
+  "name": "Product",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Product name"
+    },
+    "slug": {
+      "type": "string",
+      "description": "URL-friendly slug"
+    },
+    "price": {
+      "type": "number",
+      "description": "Price in USD"
+    },
+    "description": {
+      "type": "string",
+      "description": "Short description"
+    },
+    "long_description": {
+      "type": "string",
+      "description": "Detailed description"
+    },
+    "origin": {
+      "type": "string",
+      "description": "Matcha origin info"
+    },
+    "flavor_profile": {
+      "type": "string",
+      "description": "Flavor profile description"
+    },
+    "ingredients": {
+      "type": "string",
+      "description": "List of ingredients"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Main product image"
+    },
+    "image_url_2": {
+      "type": "string",
+      "description": "Secondary product image"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "starter_kit",
+        "premium_kit",
+        "matcha_only",
+        "accessories"
+      ],
+      "description": "Product category"
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false,
+      "description": "Show on homepage"
+    },
+    "in_stock": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "name",
+    "price"
+  ]
+}

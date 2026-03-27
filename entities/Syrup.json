@@ -1,0 +1,34 @@
+{
+  "name": "Syrup",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Syrup name"
+    },
+    "description": {
+      "type": "string",
+      "description": "Flavor description"
+    },
+    "price": {
+      "type": "number",
+      "description": "Price in USD"
+    },
+    "color_hex": {
+      "type": "string",
+      "description": "Hex color representing the syrup flavor"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Syrup bottle image"
+    },
+    "in_stock": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "name",
+    "price"
+  ]
+}
