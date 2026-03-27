@@ -3,11 +3,9 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowDownRight } from 'lucide-react';
 
-const LOGO_URL = "https://media.base44.com/images/public/69c68ea8ad04082f2770efa3/44f938149_Screenshot2026-03-27at172836.png";
-
 export default function HeroSection({ heroImage }) {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-washed-bone pt-14">
+    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-washed-bone pt-24">
 
       {/* Faint background wordmark */}
       <motion.div
@@ -30,17 +28,6 @@ export default function HeroSection({ heroImage }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          {/* Logo circle — large and prominent */}
-          <div className="mb-6 lg:mb-8">
-            <img
-              src={LOGO_URL}
-              alt="matchale — matcha bowl with frog and whisk"
-              className="rounded-full object-cover shadow-lg"
-              style={{ width: 140, height: 140 }}
-            />
-          </div>
-
-          {/* Brand name — hero-sized */}
           <h1 className="font-handwritten text-7xl sm:text-8xl md:text-9xl text-veridian leading-none mb-3">
             matchale
           </h1>

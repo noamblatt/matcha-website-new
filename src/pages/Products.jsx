@@ -52,7 +52,7 @@ export default function Products() {
         onRemove={(id) => setCartItems(prev => prev.filter(i => i.id !== id))}
       />
 
-      <main className="pt-14">
+      <main className="pt-24">
         {/* Hero */}
         <div className="max-w-[1440px] mx-auto px-6 pt-16 md:pt-24 pb-12">
           <p className="font-mono text-[10px] tracking-[0.5em] text-veridian/40 uppercase mb-4">

@@ -68,7 +68,7 @@ export default function ProductDetail() {
         onRemove={(id) => setCartItems(prev => prev.filter(i => i.id !== id))}
       />
 
-      <main className="pt-14">
+      <main className="pt-24">
         {/* Breadcrumb */}
         <div className="max-w-[1440px] mx-auto px-6 pt-8">
           <Link

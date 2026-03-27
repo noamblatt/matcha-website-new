@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-// Logo variants: 'icon' (just the frog bowl icon), 'full' (icon + wordmark), 'wordmark' (text only)
-export default function Logo({ variant = 'full', size = 'md', className = '', linkTo = '/' }) {
+const TRANSPARENT_LOGO = '/matchale-logo.png';
+const ORIGINAL_LOGO = 'https://media.base44.com/images/public/69c68ea8ad04082f2770efa3/44f938149_Screenshot2026-03-27at172836.png';
+
+export default function Logo({ variant = 'full', size = 'md', className = '', linkTo = '/', useTransparent = false }) {
   const sizeMap = {
     sm: { img: 28, text: 'text-lg' },
     md: { img: 36, text: 'text-xl' },
@@ -11,15 +13,17 @@ export default function Logo({ variant = 'full', size = 'md', className = '', li
   };
 
   const s = sizeMap[size] || sizeMap.md;
+  const logoSrc = useTransparent ? TRANSPARENT_LOGO : ORIGINAL_LOGO;
+  const imgClass = useTransparent ? 'object-contain' : 'object-cover rounded-full';
 
   const content = (
     <span className={`inline-flex items-center gap-2 ${className}`}>
       {variant !== 'wordmark' && (
         <img
-          src="https://media.base44.com/images/public/69c68ea8ad04082f2770efa3/44f938149_Screenshot2026-03-27at172836.png"
-          alt="matchale logo — a cute frog peeking out of a matcha bowl with a bamboo whisk"
-          style={{ height: s.img, width: s.img }}
-          className="object-cover rounded-full"
+          src={logoSrc}
+          alt="matchale logo"
+          style={useTransparent ? { height: s.img, width: 'auto' } : { height: s.img, width: s.img }}
+          className={imgClass}
         />
       )}
       {variant !== 'icon' && (
